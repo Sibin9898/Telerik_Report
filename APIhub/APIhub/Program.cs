@@ -7,7 +7,6 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 
-    //builder.Services.AddSingleton(u => new BlobServiceClient(builder.Configuration.GetSection("JwtSettings")));
 
 
     var jwtSettings = builder.Configuration.GetSection("JwtSettings");
