@@ -19,23 +19,27 @@
 </ReportViewer>
 
 @code {
-            public ScaleMode ScaleMode { get; set; } = ScaleMode.Specific;
-            public ViewMode ViewMode { get; set; } = ViewMode.Interactive;
-            public bool ParametersAreaVisible { get; set; }
-            public bool DocumentMapVisible { get; set; }
-            public double Scale { get; set; } = 1.0;
+    public ScaleMode ScaleMode { get; set; } = ScaleMode.Specific;
+    public ViewMode ViewMode { get; set; } = ViewMode.Interactive;
+    public bool ParametersAreaVisible { get; set; }
+    public bool DocumentMapVisible { get; set; }
+    public double Scale { get; set; } = 1.0;
 
-            // public ReportSourceOptions ReportSource { get; set; } = new ReportSourceOptions("SampleReport.trdp", new Dictionary<string, object>
-            // {
-            //     // Add parameters if applicable
-            // });
+    // public ReportSourceOptions ReportSource { get; set; } = new ReportSourceOptions("Itemmaster.trdp", new Dictionary<string, object>
+    //         {
+    //                 {"AuthToken", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVXNlcjEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQyMjc2NTEwLCJpc3MiOiJBUElodWIiLCJhdWQiOiJFLUxlYXJuaW5nIn0.U3W_1thrHbh4BxwlRPm3X1EbfeKJU4DdIElHaXa81RY" },
+    //                 { "C", 25 },    
+    //                 { "S", 45 },    
+    //                 { "V", 7 } 
+    //         });
 
+    public ReportSourceOptions ReportSource { get; set; } = new ReportSourceOptions("Itemmaster.trdp", new Dictionary<string, object>
+        {
+            { "Token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVXNlcjEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzUyNjQ1MDA4LCJpc3MiOiJBUElodWIiLCJhdWQiOiJFLUxlYXJuaW5nIn0.-pNyARMhybQYpUoA5FphK9Z9G178LN0RIF3ug-f_I7U" },
+            { "S", 522 },  // Corrected from 45 to 522 based on your screenshot
+            { "V", 2 }      // Corrected from 7 to 2 based on your screenshot
+        });
 
-            public ReportSourceOptions ReportSource { get; set; } = new ReportSourceOptions("Itemmaster.trdp", new Dictionary<string, object>
-            {
-                    { "C", 25 },    
-                    { "S", 45 },    
-                    { "V", 7 } 
-            });
-    }
+}
+
 }

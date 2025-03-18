@@ -35,7 +35,7 @@ namespace APIhub.JWT
                     issuer: issuer,
                     audience: audience,
                     claims: identity.Claims,
-                    expires: DateTime.Now.AddMinutes(15),
+                    expires: DateTime.Now.AddDays(120),
                     signingCredentials: credentials
                 );
 
