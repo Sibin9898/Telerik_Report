@@ -7,6 +7,7 @@
         public string Addrs { get; set; } 
    
         public List<ItemDetails> Items { get; set; } = new List<ItemDetails>();
+
     }
 
     public class ItemDetails

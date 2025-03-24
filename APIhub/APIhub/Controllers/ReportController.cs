@@ -27,21 +27,27 @@ namespace APIhub.Controllers
             return Ok(new { token = result });
         }
 
-        [Authorize]
+       //[Authorize]
         [HttpPost]
         [Route("GetItemMasterReports")]
         public ActionResult GetItemMasterReports([FromBody] RequestModel request)
         {
+            //string path = @"E:\Report-Terik\Git_OurProject\APIhub\APIhub\Properties\images.jpg";
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "Properties", "images.jpg");
+
+            byte[] imageBytes = System.IO.File.ReadAllBytes(path);
+
             CompanyHeader company = new CompanyHeader
             {
                 Name = "TechCorp",
-                Image = new byte[] { 255, 0, 255 }, 
+                //Image = new byte[] { 255, 0, 255 }, 
                 Addrs = "123 Silicon Valley, CA",
                 Items = new List<ItemDetails>
                 {
                     new ItemDetails { ItemCode = "ITM001", ItemName = "Laptop", DateOfPurchase = DateTime.Now.AddMonths(-2), Quantity = 10 },
                     new ItemDetails { ItemCode = "ITM002", ItemName = "Printer", DateOfPurchase = DateTime.Now.AddMonths(-1), Quantity = 5 }
-                }
+                },
+               Image = imageBytes
             };
 
             return Ok(company);

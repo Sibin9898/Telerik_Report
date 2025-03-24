@@ -17,6 +17,11 @@
               Height="900px"
               Width="100%">
 </ReportViewer>
+	<ItemGroup>
+	  <None Update="Reports\Itemmaster.trdp">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
 
 @code {
     public ScaleMode ScaleMode { get; set; } = ScaleMode.Specific;
@@ -33,9 +38,9 @@
     //                 { "V", 7 } 
     //         });
 
-    public ReportSourceOptions ReportSource { get; set; } = new ReportSourceOptions("Itemmaster.trdp", new Dictionary<string, object>
+    public ReportSourceOptions ReportSource { get; set; } = new ReportSourceOptions("Itemmaster - Copy.trdp", new Dictionary<string, object>
         {
-            { "Token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVXNlcjEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzUyNjQ1MDA4LCJpc3MiOiJBUElodWIiLCJhdWQiOiJFLUxlYXJuaW5nIn0.-pNyARMhybQYpUoA5FphK9Z9G178LN0RIF3ug-f_I7U" },
+            { "token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVXNlcjEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzUyNzM2MDk1LCJpc3MiOiJBUElodWIiLCJhdWQiOiJFLUxlYXJuaW5nIn0.kjyYFi8TRa96lXJfGN7aVP-reIPTMS1LxLfIjaB87cI" },
             { "S", 522 },  // Corrected from 45 to 522 based on your screenshot
             { "V", 2 }      // Corrected from 7 to 2 based on your screenshot
         });
