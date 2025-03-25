@@ -45,6 +45,12 @@ namespace APIhub.Controllers
                 Items = new List<ItemDetails>
                 {
                     new ItemDetails { ItemCode = "ITM001", ItemName = "Laptop", DateOfPurchase = DateTime.Now.AddMonths(-2), Quantity = 10 },
+                    new ItemDetails { ItemCode = "ITM002", ItemName = "Printer", DateOfPurchase = DateTime.Now.AddMonths(-1), Quantity = 5 },
+                    new ItemDetails { ItemCode = "ITM001", ItemName = "Laptop", DateOfPurchase = DateTime.Now.AddMonths(-2), Quantity = 10 },
+                    new ItemDetails { ItemCode = "ITM002", ItemName = "Printer", DateOfPurchase = DateTime.Now.AddMonths(-1), Quantity = 5 },
+                    new ItemDetails { ItemCode = "ITM001", ItemName = "Laptop", DateOfPurchase = DateTime.Now.AddMonths(-2), Quantity = 10 },
+                    new ItemDetails { ItemCode = "ITM002", ItemName = "Printer", DateOfPurchase = DateTime.Now.AddMonths(-1), Quantity = 5 },
+                    new ItemDetails { ItemCode = "ITM001", ItemName = "Laptop", DateOfPurchase = DateTime.Now.AddMonths(-2), Quantity = 10 },
                     new ItemDetails { ItemCode = "ITM002", ItemName = "Printer", DateOfPurchase = DateTime.Now.AddMonths(-1), Quantity = 5 }
                 },
                Image = imageBytes
